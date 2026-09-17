@@ -1,0 +1,255 @@
+1
+
+import java.util.Scanner;
+
+     class Exer01 {
+        public static void main(String[] a) {
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Digite o seu nome: ");
+            String nome = sc.nextLine();
+            System.out.print("Digite a sua idade: ");
+            int idade = sc.nextInt();
+            System.out.print("Digite a sua altura (em metros): ");
+            double altura = sc.nextDouble();
+            System.out.println(nome + " tem " + idade + " anos e " + altura + " metros de altura.");
+
+            sc.close();
+        }
+    }
+
+2
+
+import java.util.Scanner;
+
+ class Exer02 {
+    public static void main(String[] c) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o primeiro numero inteiro: ");
+        int a = sc.nextInt();
+        System.out.print("Digite o segundo número inteiro: ");
+        int b = sc.nextInt();
+        int soma = a + b;
+        int subtracao = a - b;
+        int produto = a * b;
+        int divisaoInteira = a / b;
+        int resto = a % b;
+        System.out.println("Soma: " + soma);
+        System.out.println("Subtração: " + subtracao);
+        System.out.println("Produto: " + produto);
+        System.out.println("Divisão inteira: " + divisaoInteira);
+        System.out.println("Resto da divisão: " + resto);
+
+        sc.close();
+    }
+}
+
+
+3
+
+import java.util.Scanner;
+
+ class Exer03IA {
+    public static void main(String[] a) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o valor em reais: ");
+        double valorEmReais = sc.nextDouble();
+        System.out.print("Digite a cotação do dólar: ");
+        double cotacaoDolar = sc.nextDouble();
+        double valorEmDolar = valorEmReais / cotacaoDolar;
+        System.out.printf("O valor convertido é: $ %.2f", valorEmDolar);
+
+        sc.close();
+    }
+}
+
+4
+
+import java.util.Scanner;
+
+class Exer04 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite a nota do 1 bimestre: ");
+        double nota1 = sc.nextDouble();
+        System.out.print("Digite a nota do 2 bimestre: ");
+        double nota2 = sc.nextDouble();
+        System.out.print("Digite a nota do 3 bimestre: ");
+        double nota3 = sc.nextDouble();
+        System.out.print("Digite a nota do 4 bimestre: ");
+        double nota4 = sc.nextDouble();
+        double media = (nota1 + nota2 + nota3 + nota4) / 4;
+        System.out.printf("A média do aluno é: %.2f", media);
+
+        sc.close();
+    }
+}
+
+5
+
+import java.util.Scanner;
+
+class Exer05 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o valor da hora trabalhada: ");
+        double valorHora = sc.nextDouble();
+        System.out.print("Digite a quantidade de horas trabalhadas no mês: ");
+        double horasTrabalhadas = sc.nextDouble();
+        double salarioBruto = valorHora * horasTrabalhadas;
+        double descontoInss = salarioBruto * 0.08;
+        double salarioLiquido = salarioBruto - descontoInss;
+        System.out.printf("Salário bruto: R$ %.2f", salarioBruto);
+        System.out.printf("Desconto INSS (8%%): R$ %.2f", descontoInss);
+        System.out.printf("Salário liquido: R$ %.2f", salarioLiquido);
+
+        sc.close();
+    }
+}
+
+6
+
+import java.util.Scanner;
+
+ class Exer06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o raio do circulo: ");
+        double raio = sc.nextDouble();
+        double area = Math.PI * raio * raio;
+        double perimetro = 2 * Math.PI * raio;
+        System.out.printf("Área: %.2f", area);
+        System.out.printf("Perímetro: %.2f", perimetro);
+
+        sc.close();
+    }
+}
+
+7
+
+import java.util.Scanner;
+
+ class Exer07 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite a base do retangulo: ");
+        double base = sc.nextDouble();
+        System.out.print("Digite a altura do retangulo: ");
+        double altura = sc.nextDouble();
+        double area = base * altura;
+        double perimetro = 2 * (base + altura);
+        double diagonal = Math.sqrt(base * base + altura * altura);
+        System.out.printf("Área: %.2f", area);
+        System.out.printf("Perimetro: %.2f", perimetro);
+        System.out.printf("Diagonal: %.2f", diagonal);
+
+        sc.close();
+    }
+}
+
+8
+
+import java.util.Scanner;
+
+ class Exer08 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite a temperatura em graus Celsius: ");
+        double celsius = sc.nextDouble();
+        double fahrenheit = celsius * 9.0 / 5.0 + 32;
+        double kelvin = celsius + 273.15;
+        System.out.printf("%.2f C equivale a %.2f  F", celsius, fahrenheit);
+        System.out.printf("%.2f C equivale a %.2f  K", celsius, kelvin);
+
+        sc.close();
+    }
+}
+
+9
+
+import java.util.Scanner;
+
+
+ class Exer09 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite um número inteiro: ");
+        int numero = sc.nextInt();
+        if (numero % 2 == 0) {
+            System.out.println(numero + " é par.");
+        } else {
+            System.out.println(numero + " é impar.");
+        }
+
+        sc.close();
+    }
+}
+
+10
+
+import java.util.Scanner;
+
+ class Exer10 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite a média final do aluno:");
+        double media = sc.nextDouble();
+        if (media >= 7) {
+            System.out.println(" Aprovado");
+        } else if (media >= 5) {
+            System.out.println(" Recuperação");
+        } else {
+            System.out.println(" Reprovado");
+        }
+
+        sc.close();
+    }
+}
+
+11
+
+import java.util.Scanner;
+
+ class Exer11 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o primeiro numero: ");
+        int a = sc.nextInt();
+        System.out.print("Digite o segundo numero: ");
+        int b = sc.nextInt();
+        System.out.print("Digite o terceiro numero: ");
+        int c = sc.nextInt();
+        int maior;
+        if (a > b && a > c) {
+            maior = a;
+        } else if (b > a && b > c) {
+            maior = b;
+        } else {
+            maior = c;
+        }
+        System.out.println("O maior numero é: " + maior);
+
+        sc.close();
+    }
+}
+
+12
+
+import java.util.Scanner;
+
+ class Exer12 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o consumo mensal de energia em kWh: ");
+        double consumo = sc.nextDouble();
+        double valorConta;
+        if (consumo <= 100) {
+            valorConta = consumo * 0.50;
+        } else if (consumo <= 300) {
+            valorConta = consumo * 0.75;
+        } else {
+            valorConta = consumo * 1.10;
+        }
+        System.out.printf("O valor da conta é: R$ %.2f", valorConta);
+        sc.close();
+    }
+}

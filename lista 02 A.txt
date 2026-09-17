@@ -1,0 +1,418 @@
+lista 02
+
+1
+import java.util.Scanner;
+public class Exercicio1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite sua idade: ");
+        int idade = sc.nextInt();
+
+        if (idade >= 16) {
+            System.out.println("Pode votar");
+        }
+        if (idade >= 18) {
+            System.out.println("Pode dirigir");
+        }
+        if (idade >= 60) {
+            System.out.println("E idoso");
+        }
+        if (idade <16) { 
+            System.out.println("Pode nada");
+        }
+        sc.close();
+    }
+}
+
+2
+import java.util.Scanner;
+public class Exercicio2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite um numero: ");
+        int numero = sc.nextInt();
+        int absoluto = Math.abs(numero);
+        if (numero > 0) {
+            System.out.println("E positivo");
+        }
+        if (numero % 2 == 0) {
+            System.out.println("E par");
+        }
+        if (numero % 5 == 0) {
+            System.out.println("E multiplo de 5");
+        }
+        if (absoluto >= 10 && absoluto <= 99) {
+            System.out.println("Tem dois digitos");
+        }
+
+        sc.close();
+    }
+}
+
+3
+import java.util.Scanner;
+public class Exercicio3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Temperatura: ");
+        double temperatura = sc.nextDouble();
+        System.out.print("Umidade: ");
+        double umidade = sc.nextDouble();
+        if (temperatura >= 38) {
+            System.out.println("Alerta de calor extremo");
+        }
+        if (umidade < 30) {
+            System.out.println("Alerta de umidade baixa");
+        }
+        if (temperatura >= 35 && umidade < 20) {
+            System.out.println("Alerta de risco de queimada");
+        }
+        if (temperatura < 35 && umidade > 20) {
+            System.out.println("Ta safe");
+        }
+
+        sc.close();
+    }
+}
+ 
+4
+import java.util.Scanner;
+public class Exercicio4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Primeiro numero: ");
+        int n1 = sc.nextInt();
+        System.out.print("Segundo numero: ");
+        int n2 = sc.nextInt();
+        if (n2 == 0) {
+            System.out.println("A verificacao nao pode ser feita");
+        } else {
+            if (n1 % n2 == 0) {
+                System.out.println("O primeiro e mutiplo do segundo");
+            } else {
+                System.out.println("O primeiro nao e multiplo do segundo");
+            }
+        }
+
+        sc.close();
+    }
+}
+ 
+5
+import java.util.Scanner;
+public class Exercicio5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o ano: ");
+        int ano = sc.nextInt();
+
+        if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
+            System.out.println("Ano bissexto");
+        } else {
+            System.out.println("Ano nao bissexto");
+        }
+
+        sc.close();
+    }
+}
+
+ 
+6
+import java.util.Scanner;
+public class Exercicio6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Valor da compra: R$ ");
+        double compra = sc.nextDouble();
+        double frete;
+        double total;
+        if (compra >= 199) {
+            frete = 0;
+        } else {
+            frete = 24.90;
+        }
+        total = compra + frete;
+        System.out.printf("Frete: R$ %.2f", frete);
+        System.out.printf("Total: R$ %.2f", total);
+       
+ sc.close();
+    }
+}
+ 
+7
+public class Exercicio7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite a hora: ");
+        int hora = sc.nextInt();
+        if (hora >= 0 && hora <= 11) {
+            System.out.println("Bom dia");
+        } else if (hora <= 17 && hora >= 12) {
+            System.out.println("Boa tarde");
+        } else if (hora <= 23 && hora >= 18) {
+            System.out.println("Boa noite");
+        } else {
+            System.out.println("Hora nao existe");
+        }
+
+        sc.close();
+    }
+}
+ 
+8
+import java.util.Scanner;
+public class Exercicio8 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Velocidade maxima da via: ");
+        double limite = sc.nextDouble();
+        System.out.print("Velocidade do veiculo: ");
+        double velocidade = sc.nextDouble();
+        double porcentagem = ((velocidade - limite) / limite) * 100;
+        if (velocidade <= limite) {
+            System.out.println("Nao ha multa");
+        } else if (porcentagem <= 20) {
+            System.out.println("Infracao media");
+        } else if (porcentagem <= 50) {
+            System.out.println("Infracao grave");
+        } else {
+            System.out.println("Infracao gravissima");
+        }
+
+        sc.close();
+    }
+}
+
+ 9
+import java.util.Scanner;
+public class Exercicio9 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Salario: R$ ");
+        double salario = sc.nextDouble();
+        System.out.print("Anos na empresa: ");
+        int anos = sc.nextInt();
+        double percentual;
+        if (anos < 1) {
+            percentual = 0;
+        } else if (anos <= 3) {
+            percentual = 5;
+        } else if (anos <= 10) {
+            percentual = 10;
+        } else {
+            percentual = 15;
+        }
+        double bonus = salario * percentual / 100;
+        System.out.printf("Percentual: %.0f%%%n", percentual);
+        System.out.printf("Bonus: R$ %.2f%n", bonus);
+        
+sc.close();
+    }
+} 
+
+10
+import java.util.Scanner;
+public class Exercicio10 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Usuario: ");
+        String usuario = sc.nextLine();
+        System.out.print("Senha: ");
+        String senha = sc.nextLine();
+        if (usuario.equals("admin")) {
+            if (senha.equals("java123")) {
+                System.out.println("Senha correta");
+            } else {
+                System.out.println("Senha incorreta");
+            }
+        } else {
+            System.out.println("Nao tem usuario");
+        }
+
+        sc.close();
+    }
+}
+
+11
+import java.util.Scanner;
+public class Exercicio11 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Frequencia de 0 a 100: ");
+        double frequencia = sc.nextDouble();
+        System.out.print("Media final de 0 a 10: ");
+        double media = sc.nextDouble();
+        if (frequencia < 75) {
+            System.out.println("Reprovado por falta");
+        } else {
+            if (media >= 7) {
+                System.out.println("Aprovado");
+            } else if (media >= 5) {
+                System.out.println("Recuperacao");
+            } else {
+                System.out.println("Reprovado por nota");
+            }
+        }
+
+        sc.close();
+    }
+}
+
+12
+import java.util.Scanner;
+public class Exercicio12 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Saldo: R$ ");
+        double saldo = sc.nextDouble();
+        System.out.print("Limite diario: R$ ");
+        double limite = sc.nextDouble();
+        System.out.print("Valor do saque: R$ ");
+        double saque = sc.nextDouble();
+        if (saldo < saque) {
+            System.out.println("Saldo insuficiente");
+        } else {
+            if (saque > limite) {
+                System.out.println("Valor ultrapassa o limite diario");
+            } else {
+                saldo = saldo - saque;
+                System.out.printf("Novo saldo: R$ %.2f%n", saldo);
+            }
+        }
+
+        sc.close();
+    }
+}
+
+13
+import java.util.Scanner;
+public class Exercicio13 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o primeiro numero: ");
+        double n1 = sc.nextDouble();
+        System.out.print("Digite o segundo numero: ");
+        double n2 = sc.nextDouble();
+        System.out.println("1 - Soma");
+        System.out.println("2 - Subtracao");
+        System.out.println("3 - Multiplicacao");
+        System.out.println("4 - Divisao");
+        System.out.print("Escolha uma opcao: ");
+        int opcao = sc.nextInt();
+        switch (opcao) {
+            case 1:
+                System.out.println("Resultado: " + (n1 + n2));
+                break;
+            case 2:
+                System.out.println("Resultado: " + (n1 - n2));
+                break;
+            case 3:
+                System.out.println("Resultado: " + (n1 * n2));
+                break;
+            case 4:
+                if (n2 == 0) {
+                    System.out.println("Nao e possivel dividir por zero.");
+                } else {
+                    System.out.println("Resultado: " + (n1 / n2));
+                }
+                break;
+            default:
+                System.out.println("Nao existe");
+        }
+
+        sc.close();
+    }
+}
+ 
+14
+import java.util.Scanner;
+public class Exercicio14 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Coloque o mes 1 a 12: ");
+        int mes = sc.nextInt();
+        switch (mes) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                System.out.println("31 dias");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                System.out.println("30 dias");
+                break;
+            case 2:
+                System.out.println("28 dias");
+                break;
+            default:
+                System.out.println("Mes nao existe.");
+        }
+
+        sc.close();
+    }
+}
+ 
+15
+
+import java.util.Scanner;
+public class Exercicio15 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1 - Carro");
+        System.out.println("2 - Moto");
+        System.out.print("Digite o tipo do veiculo: ");
+        int tipo = sc.nextInt();
+        double tarifa;
+        switch (tipo) {
+            case 1:
+                tarifa = 8.00;
+                break;
+            case 2:
+                tarifa = 5.00;
+                break;
+            default:
+                System.out.println("Nao existe.");
+                sc.close();
+                return;
+        }
+        System.out.print("Quantas horas tu via ficar: ");
+        int horas = sc.nextInt();
+        double valor = tarifa * horas;
+        sc.nextLine();
+        System.out.print("Possui cupom? sim ou nao: ");
+        String cupom = sc.nextLine();
+        if (cupom.equalsIgnoreCase("sim")) {
+            if (valor >= 50) {
+                valor = valor - (valor * 0.20);
+                System.out.println("Desconto de 20% aplicado.");
+            } else {
+                System.out.println("O cupom vale apenas acima de R$ 50,00.");
+            }
+        }
+        if (horas > 12) {
+            System.out.println("Aviso: permanencia longa.");
+        }
+        if (horas > 24) {
+            System.out.println("Aviso: cobrança de diaria.");
+        }
+        if (horas <= 2) {
+            System.out.println("Permanencia curta");
+        } else if (horas <= 6) {
+            System.out.println("Permanencia media");
+        } else {
+            System.out.println("Permanencia longa");
+        }
+        System.out.printf("Valor final: R$ %.2f%n", valor);
+       
+ sc.close();
+    }
+}
+
